@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 var Nightmare = require('nightmare');
 var program = require('commander');
-var nightmare = Nightmare({ show: true });
+var nightmare = Nightmare();
 
 program
   .version('0.0.1')
@@ -9,7 +9,6 @@ program
   .option('-f, --from [language]', 'a language you want to translate from')
   .option('-t, --to [language]', 'a language you want to translate to')
   .action(function(text) {
-    console.log(text);
     nightmare
       .goto('https://translate.google.com/?hl=ja')
       .wait('#gt-sl-sugg > div[value="ja"]')
@@ -32,6 +31,3 @@ program
   });
 
 program.parse(process.argv);
-
-// console.log(program.from);
-// console.log(process.argv[2]);
