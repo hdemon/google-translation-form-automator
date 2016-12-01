@@ -21,7 +21,7 @@ program
       .evaluate(function () {
         return document.querySelector('#result_box').innerHTML.replace(/<\/*span>/g, '');
       })
-      // .end()
+      .end()
       .then(function (result) {
         console.log(result)
       })
