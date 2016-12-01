@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "commander": "^2.9.0",
     "nightmare": "^2.8.1"
   },
   "name": "google-translation-cli",
